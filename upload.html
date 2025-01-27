@@ -1,0 +1,29 @@
+<!-- upload.html -->
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="invite_card" required>
+    <button type="submit">Upload</button>
+</form>
+
+<!-- send_invites.html -->
+<form method="POST">
+    <textarea name="guest_emails" placeholder="Enter guest emails, separated by commas" required></textarea>
+    <button type="submit">Send Invites</button>
+</form>
+
+<!-- dashboard.html -->
+<table>
+    <tr>
+        <th>Guest Email</th>
+        <th>Status</th>
+        <th>Adults</th>
+        <th>Kids</th>
+    </tr>
+    {% for invite in invites %}
+    <tr>
+        <td>{{ invite[2] }}</td>
+        <td>{{ invite[3] }}</td>
+        <td>{{ invite[4] }}</td>
+        <td>{{ invite[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>

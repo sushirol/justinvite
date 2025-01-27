@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Invite Status</h1>
+    <table border="1">
+        <tr>
+            <th>Guest Email</th>
+            <th>Status</th>
+            <th>Adults</th>
+            <th>Kids</th>
+        </tr>
+        {% for invite in invites %}
+        <tr>
+            <td>{{ invite[2] }}</td>
+            <td>{{ invite[3] }}</td>
+            <td>{{ invite[4] }}</td>
+            <td>{{ invite[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
